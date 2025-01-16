@@ -21,8 +21,6 @@
             
             body{
                 margin:0;
-                font-size:0;
-                
                 font-family: Roboto, sans-serif;
             }
 
@@ -75,7 +73,7 @@
 
             @media only screen and (max-width: 600px) {
                 * {
-                    font-size: 95% !important;
+                    font-size: 97.5% !important;
                 }
 
                 #contacts {
@@ -102,10 +100,9 @@
 
                 #footer-content {
                     bottom: unset !important;
-                }
-                    
-                #footer {
                     position: relative !important;
+                    margin-top: 20px !important;
+                    margin-bottom: 20px !important;
                 }
 
                 #social-links {
@@ -130,7 +127,8 @@
                 #project-gallery {
                     position: relative !important;
                     height: 250px !important;
-                    margin: 10px 0px 10px 0px !important;
+                    margin: unset !important;
+                    margin-top: 15px !important;
                 }
 
                 #about-footer {
@@ -157,6 +155,11 @@
 
                 .card.bio .form {
                     width: unset !important;
+                }
+
+                .vue-mailto .form button {
+                    width: 200px !important;
+                    margin-bottom: 10px;
                 }
 
             }
