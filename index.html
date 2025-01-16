@@ -22,7 +22,7 @@
             body{
                 margin:0;
                 font-size:0;
-                background-color:  #969696;
+                
                 font-family: Roboto, sans-serif;
             }
 
@@ -78,16 +78,19 @@
                     font-size: 95% !important;
                 }
 
-                .vue-mailto .form .form-input {
-                    width: 100% !important;
+                #contacts {
+                    width: unset !important;
                 }
 
                 #top-container {
                     flex-direction: column !important;
                 }
 
+                #container {
+                    margin: 0 !important;
+                }
+
                 #bio {
-                    width: calc(100vw - 80px) !important;
                     height: calc(20vh);
                     overflow-y: auto;
                     margin-right: 0;
@@ -97,6 +100,10 @@
                     padding-right: 0 !important;
                 }
 
+                #footer-content {
+                    bottom: unset !important;
+                }
+                    
                 #footer {
                     position: relative !important;
                 }
@@ -106,9 +113,13 @@
                     align-items: center !important;
                 }
 
-                #contacts {
-                    margin-left: 0px !important;
-                    font-size: 10px;
+                #contacts.form {
+                    width: 100% !important;
+                }
+
+                .card.bio .form {
+                    margin: unset !important;
+                    width: unset !important;
                 }
 
                 #contact-message {
@@ -119,12 +130,33 @@
                 #project-gallery {
                     position: relative !important;
                     height: 250px !important;
-                    margin-bottom: 40px !important;
+                    margin: 10px 0px 10px 0px !important;
                 }
 
                 #about-footer {
                     flex-direction: column !important;
                     margin-bottom: 20px;
+                }
+
+                .title {
+                    top: unset !important;   
+                    margin-bottom: 5px !important; 
+                }
+
+                .title.projects {
+                    top: 10px !important; 
+                }
+
+                .card.bio {
+                    margin-top: 5px !important;
+                }
+
+                .card.bio .biography {
+                    width: 100% !important;
+                }
+
+                .card.bio .form {
+                    width: unset !important;
                 }
 
             }
@@ -144,13 +176,12 @@
             }
 
             .vue-mailto .form {
-                width: 100%;
                 margin-bottom: 40px;
             }
 
             .vue-mailto .form .form-input {
-                width: 300px;
                 text-transform: uppercase;
+                width: 100% !important;
             }
 
             .vue-mailto .form textarea {
@@ -179,21 +210,37 @@
                 font-size: 18px;
             }
 
+            #container {
+                margin: 0 5vw 0 5vw;
+            }
+
+            #contacts {
+                width: unset !important;
+                margin-right: unset !important;
+                min-width: 250px;
+            }
+
+            .title {
+                opacity: 0.85; color: #fff; text-transform: uppercase;font-size: 20px; position: relative;
+            z-index: 999;
+            top:30px;
+            }
+
         </style>
     </head>
     <body>
 
-        <strong style="opacity: 0.85; color: #fff; text-transform: uppercase;font-size: 20px;  top: 20px;   position: absolute;
-        z-index: 999;
-        left: 25px;">About</strong>
+        <div id="container" style="padding: 10px; height: 100vh;">
 
-        <div class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); width: calc(100vw - 80px); position: relative;
+            <strong class="title">About</strong>
+
+        <div class="card bio" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);  position: relative;
         -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-        -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);z-index:9999; display: flex; flex-direction: column; justify-content: space-between; align-items: start; width: calc(100vw - 80px); opacity: 0.65; padding: 20px; border-radius: 5px; margin-top: 60px; margin-left: 20px; height: 100%;"> 
+        -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);z-index:9999; display: flex; flex-direction: column; justify-content: space-between; align-items: start;  opacity: 0.65; padding: 20px; border-radius: 5px; margin-top: 40px;"> 
             
             <div id="top-container" style="display: flex; flex-direction: row;">
 
-                <div id="bio" style="display: flex; flex-grow: 1; width: calc(100vw - 300px - 100px); flex-direction: column; padding: 0px; font-size: 18px;">
+                <div id="bio" class="biography" style="display: flex; flex-grow: 1; width: calc(100vw - 165px - 19vw); flex-direction: column; padding: 0px; font-size: 18px;">
                     <div><strong>Hi There,</strong> my name is <strong>João Martins</strong>, i am a software engineer based in the <strong>Porto Metropolitan Area...</strong> </div>
                     <div style="margin-top: 30px;">I attended <strong>Mestrado Integrado em Engenharia de Redes e Sistemas Informáticos at FCUP.</strong> and have an <strong>Academic Background</strong> In <strong>Computer Science</strong> and understanding of common <strong>Design Patterns</strong> and of the <strong>Main Web Protocols <small>(http, tcp/ip, udp/dgrams, dns, imap, pop3, smtp, websockets, etc...)</small></strong></div>
                     <div style="margin-top: 10px;">I currently mantain and develop <strong>UNITALK</strong>, a small webrtc videoconferencing and chat web. I also mantain and develop <strong>CINEMATECA</strong> a movie torrent downloader.</div>
@@ -202,7 +249,7 @@
 
                 <hr>
 
-                <div id="contacts" style="display: flex; flex-direction: column; padding: 0px; font-size: 18px; margin-left: 20px;">
+                <div id="contacts" class="form" style="display: flex; flex-direction: column; padding: 0px; font-size: 18px; margin-left: 20px; flex-grow: 1; width: 100%;">
                     <strong style="margin-bottom: 10px; font-size: large; text-transform: uppercase;">contacts</strong>
                     <section class="vue-mailto">
                         <campaign value="Github.io"></campaign>
@@ -228,21 +275,19 @@
                     text-decoration: none;
                     display: flex;
                     margin-left: 5px;" href="https://www.upwork.com/freelancers/~01f08fa2550a73b147?mp_source=share"><img width="50px" src="./assets/svg/upwork.svg" /></a>
+                    
                 </div>
             </div>
             
         </div>
 
-        <strong style="opacity: 0.85; color: #fff; text-transform: uppercase;font-size: 20px;     position: absolute;
-        z-index: 999;
-        margin-top: 30px;
-        left: 25px;">Some Of My Latest Projects</strong>
+        <strong class="title projects">Some Of My Latest Projects</strong>
 
-        <div id="project-gallery" class="project__gallery" style="position: absolute; left: 20px; z-index: 999; margin-top: 80px; height: calc(30vh); overflow-y: auto;">
+        <div id="project-gallery" class="project__gallery" style="position: relative; z-index: 999; margin-top: 40px; height: calc(35vh); overflow-y: auto;">
 
             <div class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); margin-bottom: 10px;
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);z-index:9999; width: calc(100vw - 80px); opacity: 0.65; display: flex; flex-direction: row; justify-content: space-between; align-items: end;  background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);z-index:9999;  opacity: 0.65; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   height: 30px; padding: 20px; border-radius: 5px;">
                     
                     <div style="display: flex; flex-direction: column;">
                         <a target="_blank"  href="https://jafrmartins.github.io/Cinemateca" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>CINEMATECA</strong> - Free Offline Movie Torrent Gallery</div></a>
@@ -256,7 +301,7 @@
 
             <div class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;  background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);  opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   height: 30px; padding: 20px; border-radius: 5px;">
                     
                     <div style="display: flex; flex-direction: column;">
                         <a target="_blank"  href="https://www.unitalk.pt/" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>UNITALK</strong> - Online Chat Service For Real Time Communication</div></a>
@@ -270,7 +315,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;    height: 30px; padding: 20px; border-radius: 5px;">
                     
                 <div style="display: flex; flex-direction: column;">
                     <a target="_blank" href="https://github.com/jafrmartins/vue-mailto" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>vue-mailto</strong> - Vue.js miniApp For sending emails through mailto: protocol handler</div></a>
@@ -284,7 +329,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;  background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   height: 30px; padding: 20px; border-radius: 5px;">
                     
                     <div style="display: flex; flex-direction: column;">
                         <a target="_blank" href="https://github.com/jafrmartins/NonsensePHP/" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>NonsensePHP</strong> - Free Command Line Program for PHP Obfuscation</div></a>
@@ -299,7 +344,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;    height: 30px; padding: 20px; border-radius: 5px;">
                     
                     <div style="display: flex; flex-direction: column;">
                         <a target="_blank" href="https://github.com/jafrmartins/nonsenseJS" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>NonsenseJS</strong> - Free Command Line Program for Javascript Obfuscation</div></a>
@@ -313,7 +358,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(135, 150, 236, 0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;    height: 30px; padding: 20px; border-radius: 5px;">
                     
                 <div style="display: flex; flex-direction: column;">
                     <a target="_blank" href="https://github.com/jafrmartins/PyNonsense" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>PyNonsense</strong> - Free Command Line Program for Python Obfuscation</div></a>
@@ -327,7 +372,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;    height: 30px; padding: 20px; border-radius: 5px;">
                     
                 <div style="display: flex; flex-direction: column;">
                     <a target="_blank" href="https://pypi.org/project/PyCyphORM/" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>PyCyphORM</strong> - In Memory Encrypted Python SQLite Database Abstration Layer</div></a>
@@ -341,7 +386,7 @@
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;    height: 30px; padding: 20px; border-radius: 5px;">
                     
                 <div style="display: flex; flex-direction: column;">
                     <a target="_blank" href="https://pkg.go.dev/github.com/jafrmartins/go-minidal#section-readme" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>GoMiniDAL</strong> - GoLang Minimalistic Database Abstration Layer</div></a>
@@ -353,108 +398,115 @@
                     
             </div>
 
-
         </div>
 
-
-        <div id="footer" class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-        -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
-        -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);z-index:9999; align-items: end; display: flex; flex-direction: jow; justify-content: center; align-items: start; position: fixed; bottom: 20px; left: 20px; background-color: #969696; width: calc(100vw - 80px); opacity: 0.65; height: 20px; padding: 20px; border-radius: 5px;">
-
-            <div style="font-size: 18px;margin-right: 5px;"><a href="mailto:j.afr.martins@outlook.pt&subject=Github%20Contact%20Request" style="color: #000; text-decoration: none;">jafrmartins@github.io&nbsp;&copy;&nbsp;</a></div>
-            
-
+        <div style="width: 100%;display: flex; justify-content: center; align-items: center;">
+            <div id="footer-content" style="font-size: 18px;
+            position: absolute;
+            bottom: 40px;
+            color: #fff !important;
+            width: 100%;
+            display: flex;
+            z-index: 999;
+            justify-content: center;"><span>jafrmartins@github.io</span>&nbsp;<small style="font-size: 70% !important;">2024-&nbsp;2025&nbsp;&copy;&nbsp;</small></div>
         </div>
         
 
-        <div id="tsparticles"></div>
-        <script>
 
-            // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-            // starting from v2 you can add only the features you need reducing the bundle size
-            $(document).ready(async function () {
-                await loadFull(tsParticles);
+        </div>
 
-                $("#tsparticles")
-                    .particles()
-                    .init(
-                        {
-                            background: {
-                                color: {
-                                    value: "#000",
-                                },
+
+        
+        
+    <div id="tsparticles"></div>
+    <script>
+
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        $(document).ready(async function () {
+            await loadFull(tsParticles);
+
+            $("#tsparticles")
+                .particles()
+                .init(
+                    {
+                        background: {
+                            color: {
+                                value: "#000",
                             },
-                            fpsLimit: 120,
-                            interactivity: {
-                                events: {
-                                    onClick: {
-                                        enable: true,
-                                        mode: "push",
-                                    },
-                                    onHover: {
-                                        enable: true,
-                                        mode: "repulse",
-                                    },
-                                },
-                                modes: {
-                                    push: {
-                                        quantity: 4,
-                                    },
-                                    repulse: {
-                                        distance: 200,
-                                        duration: 0.4,
-                                    },
-                                },
-                            },
-                            particles: {
-                                color: {
-                                    value: "#ffffff",
-                                },
-                                links: {
-                                    color: "#00FFFF",
-                                    distance: 150,
-                                    enable: true,
-                                    opacity: 0.5,
-                                    width: 1,
-                                },
-                                move: {
-                                    direction: "none",
-                                    enable: true,
-                                    outModes: {
-                                        default: "bounce",
-                                    },
-                                    random: false,
-                                    speed: 6,
-                                    straight: false,
-                                },
-                                number: {
-                                    density: {
-                                        enable: true,
-                                    },
-                                    value: 80,
-                                },
-                                opacity: {
-                                    value: 0.5,
-                                },
-                                shape: {
-                                    type: "circle",
-                                },
-                                size: {
-                                    value: { min: 1, max: 5 },
-                                },
-                            },
-                            detectRetina: true,
                         },
-                        function (container) {
-                            // container is the particles container where you can play/pause or stop/start.
-                            // the container is already started, you don't need to start it manually.
+                        fpsLimit: 120,
+                        interactivity: {
+                            events: {
+                                onClick: {
+                                    enable: true,
+                                    mode: "push",
+                                },
+                                onHover: {
+                                    enable: true,
+                                    mode: "repulse",
+                                },
+                            },
+                            modes: {
+                                push: {
+                                    quantity: 4,
+                                },
+                                repulse: {
+                                    distance: 200,
+                                    duration: 0.4,
+                                },
+                            },
                         },
-                    );
-            });
+                        particles: {
+                            color: {
+                                value: "#ffffff",
+                            },
+                            links: {
+                                color: "#00FFFF",
+                                distance: 150,
+                                enable: true,
+                                opacity: 0.5,
+                                width: 1,
+                            },
+                            move: {
+                                direction: "none",
+                                enable: true,
+                                outModes: {
+                                    default: "bounce",
+                                },
+                                random: false,
+                                speed: 6,
+                                straight: false,
+                            },
+                            number: {
+                                density: {
+                                    enable: true,
+                                },
+                                value: 80,
+                            },
+                            opacity: {
+                                value: 0.5,
+                            },
+                            shape: {
+                                type: "circle",
+                            },
+                            size: {
+                                value: { min: 1, max: 5 },
+                            },
+                        },
+                        detectRetina: true,
+                    },
+                    function (container) {
+                        // container is the particles container where you can play/pause or stop/start.
+                        // the container is already started, you don't need to start it manually.
+                    },
+                );
+        });
             
             
 
 
         </script>
+        </div>
     </body>
 </html>
