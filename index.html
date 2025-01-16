@@ -78,6 +78,10 @@
                     font-size: 95% !important;
                 }
 
+                .vue-mailto .form .form-input {
+                    width: 100% !important;
+                }
+
                 #top-container {
                     flex-direction: column !important;
                 }
@@ -90,21 +94,37 @@
                 }
 
                 #bio > div {
-                    margin-right: 0 !important;
+                    padding-right: 0 !important;
                 }
 
                 #footer {
                     position: relative !important;
                 }
 
+                #social-links {
+                    justify-content: center !important;
+                    align-items: center !important;
+                }
+
                 #contacts {
                     margin-left: 0px !important;
+                    font-size: 10px;
+                }
+
+                #contact-message {
+                    margin-bottom: 20px;
+                    text-align: justify;
                 }
 
                 #project-gallery {
                     position: relative !important;
                     height: 250px !important;
                     margin-bottom: 40px !important;
+                }
+
+                #about-footer {
+                    flex-direction: column !important;
+                    margin-bottom: 20px;
                 }
 
             }
@@ -155,7 +175,7 @@
 
             #bio > div {
                 text-align: justify;
-                margin-right: 20px;
+                padding-right: 20px;
                 font-size: 18px;
             }
 
@@ -198,16 +218,16 @@
 
             </div>
             
-            <div style="display: flex; flex-direction: row; padding: 0px; width: 100%; justify-content: space-between; align-items: stretch;">
-                <div style="font-size: small; font-weight: 900;">* Don't be Afraid to Reach Out Using The Form If You Have Any Questions Or If You Just Wan't to Talk!!</div>
-                <div style="display: flex;justify-content: end;">
+            <div id="about-footer" style="display: flex; flex-direction: row; padding: 0px; width: 100%; justify-content: space-between; align-items: stretch;">
+                <div id="contact-message" style="font-size: small; font-weight: 900;">* Don't be Afraid to Reach Out Using The Form If You Have Any Questions Or If You Just Wan't to Talk!!</div>
+                <div id="social-links" style="display: flex;justify-content: end;align-items: end;">
                     <a target="_blank" style="color:black; text-decoration: none;" href="https://github.com/jafrmartins"><img width="30px" src="./assets/svg/github.svg" /></a>
                     <a target="_blank" style="color:black; text-decoration: none;" href="https://www.linkedin.com/in/jo%C3%A3o-afonso-martins-337980197/"><img width="30px" src="./assets/svg/linkedin.svg" /></a>
                     <a target="_blank" style="color: black;
                     text-decoration: none;
                     display: flex;
                     margin-left: 5px;" href="https://www.upwork.com/freelancers/~01f08fa2550a73b147?mp_source=share"><img width="50px" src="./assets/svg/upwork.svg" /></a>
-                    <a target="_blank" style="color:black; text-decoration: none;" href="https://wa.me/351919825185?text=Github%20Contact%20Request"><img width="30px" style="margin-left: 5px;margin-top: 5px;" src="./assets/svg/whatsapp-logo.png" /></a>
+                    <a target="_blank" style="color:black; text-decoration: none;" href="https://wa.me/351919825185?text=Github%20Contact%20Request"><img width="25px" style="margin-left: 5px;margin-top: 5px;" src="./assets/svg/whatsapp-logo.png" /></a>
                 </div>
             </div>
             
@@ -218,7 +238,7 @@
         margin-top: 30px;
         left: 25px;">Some Of My Latest Projects</strong>
 
-        <div id="project-gallery" class="project__gallery" style="position: absolute; left: 20px; z-index: 999; margin-top: 80px; height: calc(35vh - 10px); overflow-y: auto;">
+        <div id="project-gallery" class="project__gallery" style="position: absolute; left: 20px; z-index: 999; margin-top: 80px; height: calc(30vh); overflow-y: auto;">
 
             <div class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); margin-bottom: 10px;
@@ -246,6 +266,20 @@
                         <a target="_blank" style="color:black; text-decoration: none;" href="https://www.unitalk.pt/"><img width="90px" src="./assets/svg/python-logo.png" /><img width="28px" style="padding-left: 5px;" src="./assets/svg/javascript.svg" /></a>
                     </div>
 
+            </div>
+
+            <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);width: calc(100vw - 80px); opacity: 0.65;z-index:9999; display: flex; flex-direction: row; justify-content: space-between; align-items: end;   background-color:  #969696; height: 30px; padding: 20px; border-radius: 5px;">
+                    
+                <div style="display: flex; flex-direction: column;">
+                    <a target="_blank" href="https://github.com/jafrmartins/vue-mailto" style="text-decoration: none; color: black"><div style="font-size: 18px; margin-bottom: 5px;"><strong>vue-mailto</strong> - Vue.js miniApp For sending emails through mailto: protocol handler</div></a>
+                </div>
+    
+                <div style="display: flex;width: 305px;justify-content: flex-end;margin-top: 100px;">
+                    <a target="_blank"  target="_blank" style="color:black; text-decoration: none;" href="https://github.com/jafrmartins/vue-mailto"><img width="20px" src="./assets/svg/vue.svg" /><img width="28px" style="padding-left: 5px;" src="./assets/svg/javascript.svg" /></a>
+                </div>  
+                    
             </div>
 
             <div class="card" style="margin-top: 10px; box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
