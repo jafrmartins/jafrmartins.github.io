@@ -10,9 +10,7 @@
 
         <!-- then include jquery wrapper -->
         <script src="https://cdn.jsdelivr.net/npm/@tsparticles/jquery"></script>
-        <script>
-
-        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
             
             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -69,7 +67,12 @@
                     50%{background-position:100% 19%}
                     100%{background-position:0% 82%; opacity: 1;}
                 }
-            
+
+                @media only screen and (max-width: 600px) {
+                    * {
+                        font-size: 95% !important;
+                    }
+                }
 
         </style>
     </head>
@@ -98,7 +101,7 @@
             
         </div>
 
-        <div id="project-gallery" class="project__gallery" style="position: absolute; left: 20px; z-index: 999; margin-top: 140px; height: 80vh; overflow-y: auto;">
+        <div id="project-gallery" class="project__gallery" style="position: absolute; left: 20px; z-index: 999; margin-top: 140px; height: calc(65vh - 10px); overflow-y: auto;">
 
             <div class="card" style="box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75);
                 -webkit-box-shadow: 5px 5px 5px 0px rgba(255,255,255,0.75); margin-bottom: 10px;
